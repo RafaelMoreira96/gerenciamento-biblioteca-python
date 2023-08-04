@@ -9,11 +9,11 @@ Este é um projeto de estudos que visa aplicar os conhecimentos abaixo:
 
 ## Requisitos para rodar a aplicação
 
-- sudo apt-get install python3.8-full
-- pip install fastapi@0.100.0
-- pip install pip-chill@1.0.3
-- pip install uvicorn@0.22.0
-- pip install sqlalchemy@2.0.19
+- `sudo apt-get install python3.8-full`
+- `pip install fastapi==0.100.0`
+- `pip install pip-chill==1.0.3`
+- `pip install uvicorn==0.22.0`
+- `pip install sqlalchemy==2.0.19`
 
 ## Requisições da API
 
