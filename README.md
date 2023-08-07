@@ -33,12 +33,12 @@ Este é um projeto de estudos que visa aplicar os conhecimentos abaixo:
   "publishing_company": "Clube dos Autores"
 }
 ```
+## Implementação em andamento
+
+A implementação do front-end, como citado anteriormente, em versionamentos anteriores, está sendo feita utilizando o Angular 16. Até o presente momento, foi feita as telas de cadastro dos livros e uma listagem de tudo que foi salvo no banco de dados. Também foram escritas algumas rotas e feito um `service` para consumir a API.
+
+Até o momento, as requisições de "adicionar um livro" e "listar livros", foram implementadas com sucesso. Ainda será feita algumas melhorias, porém já está funcional.
 
 ## Implementações futuras
 
-A próxima idéia é desenvolver um front-end para consumir a API. Será duas versões, sendo uma para web e outra para mobile. As tecnologias utilizadas serão estas abaixo:
-
-- Angular (front-end)
-- ReactNative (mobile)
-
-A ideia de utilizar essas duas ferramentas é que primeiro, implementar um front-end amigável para consumir essa API e utilizar uma tecnologia que não tenho contato: o React Native.
+A próxima idéia é desenvolver uma aplicação mobile para fazer o consumo da API. A tecnologia utilizada será o ReactNative.

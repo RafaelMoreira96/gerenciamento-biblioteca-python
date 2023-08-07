@@ -1,0 +1,54 @@
+<div class="card card-primary">
+  <div class="card-header">
+    <h3 class="card-title"> Adicionar Livro </h3>
+  </div>
+
+  <form>
+    <div class="card-body">
+      <div class="form-group">
+        <label for="title"> Título </label>
+        <input
+          [(ngModel)]="book.title"
+          [formControl]="title"
+          type="text"
+          class="form-control"
+          name="title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="genre"> Gênero </label>
+        <input
+          [(ngModel)]="book.genre"
+          [formControl]="genre"
+          type="text"
+          class="form-control"
+          name="genre"
+        />
+      </div>
+      <div class="form-group">
+        <label for="author"> Autor </label>
+        <input
+          [(ngModel)]="book.author"
+          [formControl]="author"
+          type="text"
+          class="form-control"
+          name="author"
+        />
+      </div>
+      <div class="form-group">
+        <label for="publishing_company"> Editora </label>
+        <input
+          [(ngModel)]="book.publishing_company"
+          [formControl]="publishing_company"
+          type="text"
+          class="form-control"
+          name="publishing_company"
+        />
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <button (click)="create()" type="submit" class="btn btn-primary"> Cadastrar </button>
+    </div>
+  </form>
+</div>
