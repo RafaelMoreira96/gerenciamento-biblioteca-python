@@ -1,6 +1,6 @@
 <div class="">
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="position: fixed">
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
@@ -24,22 +24,25 @@
               <p>Dashboard</p>
             </a>
           </li>
+          
+          <li class="nav-item">
+            <a routerLink="book" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              Livros adquiridos
+            </a>
+          </li>
+
           <li class="nav-item">
             <!-- Cadastro de Livros -->
             <a class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              
               <p>
                 Livros
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a routerLink="clientes" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  Livros adquiridos
-                </a>
-              </li>
+              
               <li class="nav-item">
                 <a routerLink="funcionarios" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -82,6 +85,8 @@
 </div>
 <app-header></app-header>
 
-<div class="content-wrapper spacing-margin">
-  <router-outlet></router-outlet>
+<div class="content-wrapper spacing-margin background-love">
+  <div class="opacity">
+  <router-outlet ></router-outlet>
+  </div>
 </div>
