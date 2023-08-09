@@ -19,7 +19,7 @@ export class BookService {
   }
 
   updateBook(book: Book): Observable<Book> {
-    return this.http.put<Book>(`http://localhost:8000/book/${book.id}`, book);
+    return this.http.put<Book>(`http://localhost:8000/book/update/${book.id}`, book);
   }
 
   deleteBook(id: number): Observable<Book> {
@@ -27,6 +27,6 @@ export class BookService {
   } 
 
   getBook(id: number): Observable<Book> {
-    return this.http.get<Book>(`http://localhost:8000/book/${id}`);
+    return this.http.get<Book>(`http://localhost:8000/book/get/${id}`);
   }
 }

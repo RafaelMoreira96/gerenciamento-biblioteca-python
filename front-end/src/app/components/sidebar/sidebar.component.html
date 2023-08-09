@@ -31,51 +31,6 @@
               Livros adquiridos
             </a>
           </li>
-
-          <li class="nav-item">
-            <!-- Cadastro de Livros -->
-            <a class="nav-link">
-              
-              <p>
-                Livros
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              
-              <li class="nav-item">
-                <a routerLink="funcionarios" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  Livros emprestados (em desenvolv.)
-                </a>
-              </li>
-            </ul>
-          </li>
-          
-          <li class="nav-item">
-            <!-- Relatório -->
-            <a class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Relatório de leitura
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a routerLink="clientes" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  Livros adquiridos
-                </a>
-              </li>
-              <li class="nav-item">
-                <a routerLink="funcionarios" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  Livros emprestados (em desenvolv.)
-                </a>
-              </li>
-            </ul>
-          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -86,7 +41,7 @@
 <app-header></app-header>
 
 <div class="content-wrapper spacing-margin background-love">
-  <div class="opacity">
-  <router-outlet ></router-outlet>
+  <div>
+    <router-outlet ></router-outlet>
   </div>
 </div>

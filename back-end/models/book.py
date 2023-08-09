@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 Base = declarative_base()
 
@@ -14,7 +14,7 @@ class BookDB(Base):
     publishing_company = Column(String, nullable=False)
 
 class Book(BaseModel):
-    title: str
-    genre: str
-    author: str
-    publishing_company: str
+    title: str = Field(..., description="Title of the book")
+    genre: str = Field(..., description="Genre of the book")
+    author: str = Field(..., description="Author of the book")
+    publishing_company: str = Field(..., description="Publishing company of the book")

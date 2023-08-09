@@ -44,7 +44,7 @@ export class BookCreateComponent implements OnInit {
         this.router.navigate(['book']);
       }, 
       (ex) => {
-        this.toastr.error('Error:', ex.error.message);
+        this.toastr.error('Error:', ex.errorMessage);
         this.router.navigate(['book']);
       }
     )

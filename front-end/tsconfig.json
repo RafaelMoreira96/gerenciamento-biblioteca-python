@@ -18,6 +18,9 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
+    "paths": {
+      "@swimlane/ngx-datatable/*": ["node_modules/@swimlane/ngx-datatable/*"]
+    },
     "useDefineForClassFields": false,
     "lib": [
       "ES2022",
