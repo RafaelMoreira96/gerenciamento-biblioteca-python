@@ -1,6 +1,10 @@
-from sqlalchemy.orm import Session
-from models.book import Book, BookDB
+import csv
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
+
+from models.book import BookDB
 from config.sql_functions import get_session
+
 
 def create_book(new_book: BookDB):
     session = get_session()
@@ -8,7 +12,7 @@ def create_book(new_book: BookDB):
         title=new_book.title,
         genre=new_book.genre,
         author=new_book.author,
-        publishing_company=new_book.publishing_company
+        #publishing_company=new_book.publishing_company
     )
     session.add(book_instance)
     session.commit()
@@ -27,7 +31,7 @@ def update_book(id: int, updated_book: BookDB):
         book_to_update.title =  updated_book.title
         book_to_update.author = updated_book.author
         book_to_update.genre = updated_book.genre
-        book_to_update.publishing_company = updated_book.publishing_company
+        #book_to_update.publishing_company = updated_book.publishing_company
         session.commit()
     session.close()
     
@@ -44,3 +48,21 @@ def get_book(id: int):
     book = session.query(BookDB).filter_by(id=id).first()
     session.close()
     return book
+
+def create_book_by_csv():
+    session = get_session()
+    
+    with open("files/books.csv", 'r', newline='', encoding='utf-8') as csvfile:
+        csvreader = csv.DictReader(csvfile)
+        book_dicts = []
+        for row in csvreader:
+            book_dicts.append({
+                'title': row['title'],
+                'genre': row['genre'],
+                'author': row['author']
+            })
+
+    with session as session:
+        conn = session.connection() 
+        conn.execute(BookDB.__table__.insert().values(book_dicts))
+        session.commit()

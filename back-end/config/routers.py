@@ -44,3 +44,8 @@ class Routers:
         @self.app.get("/book/get/{id}")
         def get_book(id: int):
             return controller.get_book(id)
+
+        @self.app.post("/book/create_by_csv")
+        def create_book_by_csv():
+            controller.create_book_by_csv()
+            return {'message': 'Import successfully'}
