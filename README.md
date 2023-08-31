@@ -60,16 +60,20 @@ As tecnologias utilizadas no momento foram Python, FastAPI, SQL Alchemy no back-
 
 ### Telas
 
-- Home
+- Home:
+
 ![Descrição da Imagem](front-end/src/assets/img/home.png)
 
-- Lista de livros
+- Lista de livros:
+
 ![Descrição da Imagem](front-end/src/assets/img/list-books.png)
 
-- Adicionar livro
+- Adicionar livro:
+
 ![Descrição da Imagem](front-end/src/assets/img/create-book.png)
 
-- Editar livro
+- Editar livro:
+
 ![Descrição da Imagem](front-end/src/assets/img/edit-book.png)
 
 
