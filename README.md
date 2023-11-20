@@ -1,4 +1,4 @@
-# Andi & Library: Aplicação de gerenciamento para sua biblioteca
+# Library Management: Aplicação de gerenciamento para sua biblioteca
 
 Este projeto é uma pequena aplicação onde você consegue organizar sua biblioteca pessoal e ter um controle de quais livros você possui.
 Ele é um projeto de estudos para aplicar os conhecimentos abaixo:
